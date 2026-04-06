@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bloxd Codes Hub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0d1117;
+      color: #e6edf3;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      background: #161b22;
+    }
+    .container {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .card {
+      background: #161b22;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+    .code {
+      color: #3fb950;
+      font-family: monospace;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 8px;
+      background: #238636;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #2ea043;
+    }
+    h2 {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body><header>Bloxd.io Codes Hub</header><div class="container">  <h2>🔥 Featured Codes</h2>  <div class="card">
+    <div class="code">/spawn diamond_block</div>
+    <button onclick="copyCode('/spawn diamond_block')">Copy</button>
+  </div>  <div class="card">
+    <div class="code">/give speed_boost</div>
+    <button onclick="copyCode('/give speed_boost')">Copy</button>
+  </div>  <h2>📘 API Reference</h2>  <div class="card">
+    <div class="code">getPosition(entityId)</div>
+    <p>Get position of a player/entity → returns [x, y, z]</p>
+  </div>  <div class="card">
+    <div class="code">setPosition(entityId, x, y, z)</div>
+    <p>Teleport a player/entity to coordinates</p>
+  </div>  <div class="card">
+    <div class="code">getPlayerIds()</div>
+    <p>Returns all player IDs in the server</p>
+  </div>  <div class="card">
+    <div class="code">sendMessage(playerId, message, style)</div>
+    <p>Send a message to a specific player</p>
+  </div>  <div class="card">
+    <div class="code">broadcastMessage(message, style)</div>
+    <p>Send a message to all players</p>
+  </div>  <div class="card">
+    <div class="code">setHealth(entityId, newHealth)</div>
+    <p>Set health of an entity</p>
+  </div>  <div class="card">
+    <div class="code">setVelocity(entityId, x, y, z)</div>
+    <p>Set movement velocity</p>
+  </div>  <div class="card">
+    <div class="code">applyImpulse(entityId, x, y, z)</div>
+    <p>Apply force/push to entity</p>
+  </div>  <h2>🧠 Where to Insert Code (IMPORTANT)</h2>  <div class="card">
+    <p><b>World Codes = The brain of your world.</b></p>
+    <p>You do <b>NOT</b> paste code in the lobby name or game title.</p>
+    <p>Instead:</p>
+    <ul>
+      <li>Open your Bloxd world</li>
+      <li>Go to <b>World Settings</b></li>
+      <li>Find <b>"World Code"</b> or scripting section</li>
+      <li>Paste your code there</li>
+    </ul>
+  </div>  <h2>⚡ Example: On Player Join Message</h2>  <div class="card">
+    <div class="code">
+function onPlayerJoin(playerId) {
+  sendMessage(playerId, "Welcome to the world!", "green");
+}
+    </div>
+    <button onclick="copyCode('function onPlayerJoin(playerId) { sendMessage(playerId, "Welcome to the world!", "green"); }')">Copy</button>
+    <p>This will send a welcome message every time a player joins your world.</p>
+  </div></div><script>
+function copyCode(code) {
+  navigator.clipboard.writeText(code);
+  alert('Copied: ' + code);
+}
+</script></body>
+</html>
